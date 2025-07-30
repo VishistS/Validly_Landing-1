@@ -82,6 +82,72 @@
     </div>
   </div>
   
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <p>Everything you need to know about Validly</p>
+    <div class="faq-container">
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>How does Validly validate business ideas?</h3>
+          <i data-feather="chevron-down" class="faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Validly uses advanced AI algorithms to analyze market data, competitor information, and customer demand patterns. We provide comprehensive insights including market size, competition analysis, target audience identification, and risk assessment—all in minutes instead of months.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>What types of businesses can use Validly?</h3>
+          <i data-feather="chevron-down" class="faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Validly is designed for entrepreneurs, SaaS founders, enterprise business development teams, and anyone looking to validate a business idea. Whether you're building a startup or expanding an existing business, our platform provides the insights you need to make informed decisions.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>How accurate are the validation results?</h3>
+          <i data-feather="chevron-down" class="faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Our validation results are based on real-time market data and comprehensive analysis. While no tool can guarantee 100% accuracy, Validly provides data-driven insights that significantly reduce the risk of pursuing unviable ideas and help you focus on opportunities with the highest potential.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>When will Validly be available?</h3>
+          <i data-feather="chevron-down" class="faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+          <p>We're currently in development and plan to launch soon. Join our waitlist to get early access and be among the first to experience how Validly can transform your business idea validation process.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>What's included in the validation report?</h3>
+          <i data-feather="chevron-down" class="faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Each validation report includes market analysis, competitor intelligence, target audience insights, MVP roadmap, risk assessment, and a comprehensive validation score. You'll receive actionable insights to guide your business decisions.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>How much will Validly cost?</h3>
+          <i data-feather="chevron-down" class="faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Currently we have 2 tiers, a free subscription and a 10 dollar a month unlimited access paid subscription. Join our waitlist to receive updates on pricing and special early access offers for our founding users.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
   <div id="waitlist" class="waitlist-section">
       <div class="waitlist-box">
         <h2> Join the Waitlist</h2>
@@ -112,5 +178,27 @@
     </div>
   </footer>
   <script>feather.replace()</script>
+  <script>
+    // FAQ Accordion functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const faqItems = document.querySelectorAll('.faq-item');
+      
+      faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        
+        question.addEventListener('click', () => {
+          // Close all other FAQ items
+          faqItems.forEach(otherItem => {
+            if (otherItem !== item) {
+              otherItem.classList.remove('active');
+            }
+          });
+          
+          // Toggle current item
+          item.classList.toggle('active');
+        });
+      });
+    });
+  </script>
 </body>
 </html>
